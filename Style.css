@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(158, 162, 165);
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+
+}
+.Container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clacy{
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: inset 5px 5px 12 px #ffffff,
+                        5px 5px 12px #b8abab;
+    display: grid;
+    grid-template-columns: repeat(4,80px);
+}
+input{
+    grid-column: span 4;
+    height: 75px;
+    width: 290px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                        5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 20px;
+    color: rgb(88, 25, 25);
+    font-size: 30px;
+    text-align: end;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-family: monospace;
+}
+
+button{
+    height: 48px;
+    width: 60px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #b34949,
+                    5px 5px 12px rgba(19, 213, 219, 0.16);
+    border: none;
+    border-radius: 50%;
+    margin: 15px;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.equal{
+    width: 140px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #b34949,
+                    5px 5px 12px  rgba(19, 213, 219, 0.16) ;
+    border: none;
+    border-radius: 40px;
+}

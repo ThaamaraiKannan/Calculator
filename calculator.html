@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <title> Calculator App </title>
+        <link rel="Stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div class="Container">
+            <div class="clacy">
+                <input type="text" placeholder="0" id="output-screen">
+                <button onclick="Clear()">CL</button>
+                <button type="button" onclick="Delete()">DEL</button>
+                <button type="button" onclick="display('%')">%</button>
+                <button type="button" onclick="display('/')">/</button>
+                <button type="button" onclick="display('7')">7</button>
+                <button type="button" onclick="display('8')">8</button>
+                <button type="button" onclick="display('9')">9</button>
+                <button type="button" onclick="display('*')">*</button>
+                <button type="button" onclick="display('4')">4</button>
+                <button type="button" onclick="display('5')">5</button>
+                <button type="button" onclick="display('6')">6</button>
+                <button type="button" onclick="display('-')">-</button>
+                <button type="button" onclick="display('1')">1</button>
+                <button type="button" onclick="display('2')">2</button>
+                <button type="button" onclick="display('3')">3</button>
+                <button type="button" onclick="display('+')">+</button>
+                <button type="button" onclick="display('.')">.</button>
+                <button type="button" onclick="display('0')">0</button>
+                <button type="button" onclick="Calculate()" class="equal">=</button>
+            </div>
+        </div>
+
+        <script>
+            let outputScreen = document.getElementById("output-screen");
+
+            function display(num)
+            {
+                outputScreen.value += num;
+            }
+            function Calculate()
+            {
+                try
+                {
+                    outputScreen.value = eval(outputScreen.value);
+                }
+                catch(err)
+                {
+                    alert("Invalid")
+                }
+            }
+            function Clear()
+            {
+                outputScreen.value = "";
+            }
+            function Delete(){
+                outputScreen.value = outputScreen.value.slice(0,-1);
+            }
+        </script>
+    </body>
+</html>
